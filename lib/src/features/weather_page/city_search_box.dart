@@ -7,7 +7,7 @@ final cityProvider = StateProvider<String>((ref) {
 });
 
 class CitySearchBox extends ConsumerStatefulWidget {
-  const CitySearchBox({Key? key}) : super(key: key);
+  const CitySearchBox({Key key}) : super(key: key);
   @override
   ConsumerState<CitySearchBox> createState() => _CitySearchRowState();
 }
@@ -15,7 +15,7 @@ class CitySearchBox extends ConsumerStatefulWidget {
 class _CitySearchRowState extends ConsumerState<CitySearchBox> {
   static const _radius = 30.0;
 
-  late final _searchController = TextEditingController();
+  final _searchController = TextEditingController();
 
   @override
   void initState() {

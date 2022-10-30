@@ -6,7 +6,7 @@ import 'package:open_weather_example_flutter/src/features/weather_page/current_w
 import 'package:open_weather_example_flutter/src/features/weather_page/weather_icon_image.dart';
 
 class CurrentWeather extends ConsumerWidget {
-  const CurrentWeather({Key? key}) : super(key: key);
+  const CurrentWeather({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final weatherDataValue = ref.watch(currentWeatherControllerProvider);
@@ -26,8 +26,7 @@ class CurrentWeather extends ConsumerWidget {
 }
 
 class CurrentWeatherContents extends ConsumerWidget {
-  const CurrentWeatherContents({Key? key, required this.data})
-      : super(key: key);
+  const CurrentWeatherContents({Key key, this.data}) : super(key: key);
   final WeatherData data;
 
   @override

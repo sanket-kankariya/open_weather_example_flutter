@@ -5,14 +5,14 @@ import 'package:open_weather_example_flutter/src/repositories/api_error.dart';
 import 'package:open_weather_example_flutter/src/repositories/weather_repository.dart';
 
 class CurrentWeatherController extends StateNotifier<AsyncValue<WeatherData>> {
-  CurrentWeatherController(this._weatherRepository, {required this.city})
+  CurrentWeatherController(this._weatherRepository, {this.city})
       : super(const AsyncValue.loading()) {
     getWeather(city: city);
   }
   final HttpWeatherRepository _weatherRepository;
   final String city;
 
-  Future<void> getWeather({required String city}) async {
+  Future<void> getWeather({String city}) async {
     try {
       state = const AsyncValue.loading();
       final weather = await _weatherRepository.getWeather(city: city);

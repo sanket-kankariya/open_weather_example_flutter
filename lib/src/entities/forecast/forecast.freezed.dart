@@ -21,13 +21,13 @@ Forecast _$ForecastFromJson(Map<String, dynamic> json) {
 class _$ForecastTearOff {
   const _$ForecastTearOff();
 
-  _Forecast call({required List<Weather> list}) {
+  _Forecast call({ List<Weather> list}) {
     return _Forecast(
       list: list,
     );
   }
 
-  Forecast fromJson(Map<String, Object?> json) {
+  Forecast fromJson(Map<String, Object> json) {
     return Forecast.fromJson(json);
   }
 }
@@ -62,7 +62,7 @@ class _$ForecastCopyWithImpl<$Res> implements $ForecastCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? list = freezed,
+    Object list = freezed,
   }) {
     return _then(_value.copyWith(
       list: list == freezed
@@ -92,7 +92,7 @@ class __$ForecastCopyWithImpl<$Res> extends _$ForecastCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? list = freezed,
+    Object list = freezed,
   }) {
     return _then(_Forecast(
       list: list == freezed
@@ -106,7 +106,7 @@ class __$ForecastCopyWithImpl<$Res> extends _$ForecastCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Forecast implements _Forecast {
-  _$_Forecast({required this.list});
+  _$_Forecast({ this.list});
 
   factory _$_Forecast.fromJson(Map<String, dynamic> json) =>
       _$$_ForecastFromJson(json);
@@ -143,7 +143,7 @@ class _$_Forecast implements _Forecast {
 }
 
 abstract class _Forecast implements Forecast {
-  factory _Forecast({required List<Weather> list}) = _$_Forecast;
+  factory _Forecast({ List<Weather> list}) = _$_Forecast;
 
   factory _Forecast.fromJson(Map<String, dynamic> json) = _$_Forecast.fromJson;
 

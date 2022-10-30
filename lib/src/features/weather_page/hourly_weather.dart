@@ -6,7 +6,7 @@ import 'package:open_weather_example_flutter/src/features/weather_page/hourly_we
 import 'package:open_weather_example_flutter/src/features/weather_page/weather_icon_image.dart';
 
 class HourlyWeather extends ConsumerWidget {
-  const HourlyWeather({Key? key}) : super(key: key);
+  const HourlyWeather({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -28,7 +28,7 @@ class HourlyWeather extends ConsumerWidget {
 }
 
 class HourlyWeatherRow extends StatelessWidget {
-  const HourlyWeatherRow({Key? key, required this.weatherDataItems})
+  const HourlyWeatherRow({Key key,  this.weatherDataItems})
       : super(key: key);
   final List<WeatherData> weatherDataItems;
 
@@ -44,7 +44,7 @@ class HourlyWeatherRow extends StatelessWidget {
 }
 
 class HourlyWeatherItem extends ConsumerWidget {
-  const HourlyWeatherItem({Key? key, required this.data}) : super(key: key);
+  const HourlyWeatherItem({Key key,  this.data}) : super(key: key);
   final WeatherData data;
 
   @override
@@ -57,14 +57,14 @@ class HourlyWeatherItem extends ConsumerWidget {
         children: [
           Text(
             DateFormat.E().format(data.date),
-            style: textTheme.caption!.copyWith(fontWeight: fontWeight),
+            style: textTheme.caption.copyWith(fontWeight: fontWeight),
           ),
           const SizedBox(height: 8),
           WeatherIconImage(iconUrl: data.iconUrl, size: 48),
           const SizedBox(height: 8),
           Text(
             '$temp°',
-            style: textTheme.bodyText1!.copyWith(fontWeight: fontWeight),
+            style: textTheme.bodyText1.copyWith(fontWeight: fontWeight),
           ),
         ],
       ),

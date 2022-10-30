@@ -10,7 +10,7 @@ part 'forecast.freezed.dart';
 @freezed
 class Forecast with _$Forecast {
   factory Forecast({
-    required List<Weather> list,
+    List<Weather> list,
   }) = _Forecast;
 
   factory Forecast.fromJson(Map<String, dynamic> json) =>

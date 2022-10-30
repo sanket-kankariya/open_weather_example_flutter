@@ -17,8 +17,8 @@ class OpenWeatherMapAPI {
       );
 
   Uri _buildUri({
-    required String endpoint,
-    required Map<String, dynamic> Function() parametersBuilder,
+     String endpoint,
+     Map<String, dynamic> Function() parametersBuilder,
   }) {
     return Uri(
       scheme: "https",

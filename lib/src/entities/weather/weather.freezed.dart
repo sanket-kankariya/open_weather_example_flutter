@@ -22,9 +22,9 @@ class _$WeatherParamsTearOff {
   const _$WeatherParamsTearOff();
 
   _WeatherParams call(
-      {required double temp,
-      @JsonKey(name: 'temp_min') required double tempMin,
-      @JsonKey(name: 'temp_max') required double tempMax}) {
+      { double temp,
+      @JsonKey(name: 'temp_min')  double tempMin,
+      @JsonKey(name: 'temp_max')  double tempMax}) {
     return _WeatherParams(
       temp: temp,
       tempMin: tempMin,
@@ -32,7 +32,7 @@ class _$WeatherParamsTearOff {
     );
   }
 
-  WeatherParams fromJson(Map<String, Object?> json) {
+  WeatherParams fromJson(Map<String, Object> json) {
     return WeatherParams.fromJson(json);
   }
 }
@@ -76,9 +76,9 @@ class _$WeatherParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? temp = freezed,
-    Object? tempMin = freezed,
-    Object? tempMax = freezed,
+    Object temp = freezed,
+    Object tempMin = freezed,
+    Object tempMax = freezed,
   }) {
     return _then(_value.copyWith(
       temp: temp == freezed
@@ -123,9 +123,9 @@ class __$WeatherParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? temp = freezed,
-    Object? tempMin = freezed,
-    Object? tempMax = freezed,
+    Object temp = freezed,
+    Object tempMin = freezed,
+    Object tempMax = freezed,
   }) {
     return _then(_WeatherParams(
       temp: temp == freezed
@@ -148,9 +148,9 @@ class __$WeatherParamsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WeatherParams implements _WeatherParams {
   _$_WeatherParams(
-      {required this.temp,
-      @JsonKey(name: 'temp_min') required this.tempMin,
-      @JsonKey(name: 'temp_max') required this.tempMax});
+      { this.temp,
+      @JsonKey(name: 'temp_min')  this.tempMin,
+      @JsonKey(name: 'temp_max')  this.tempMax});
 
   factory _$_WeatherParams.fromJson(Map<String, dynamic> json) =>
       _$$_WeatherParamsFromJson(json);
@@ -199,9 +199,9 @@ class _$_WeatherParams implements _WeatherParams {
 
 abstract class _WeatherParams implements WeatherParams {
   factory _WeatherParams(
-      {required double temp,
-      @JsonKey(name: 'temp_min') required double tempMin,
-      @JsonKey(name: 'temp_max') required double tempMax}) = _$_WeatherParams;
+      { double temp,
+      @JsonKey(name: 'temp_min')  double tempMin,
+      @JsonKey(name: 'temp_max')  double tempMax}) = _$_WeatherParams;
 
   factory _WeatherParams.fromJson(Map<String, dynamic> json) =
       _$_WeatherParams.fromJson;
@@ -229,9 +229,9 @@ class _$WeatherInfoTearOff {
   const _$WeatherInfoTearOff();
 
   _WeatherInfo call(
-      {required String main,
-      required String description,
-      required String icon}) {
+      { String main,
+       String description,
+       String icon}) {
     return _WeatherInfo(
       main: main,
       description: description,
@@ -239,7 +239,7 @@ class _$WeatherInfoTearOff {
     );
   }
 
-  WeatherInfo fromJson(Map<String, Object?> json) {
+  WeatherInfo fromJson(Map<String, Object> json) {
     return WeatherInfo.fromJson(json);
   }
 }
@@ -277,9 +277,9 @@ class _$WeatherInfoCopyWithImpl<$Res> implements $WeatherInfoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? main = freezed,
-    Object? description = freezed,
-    Object? icon = freezed,
+    Object main = freezed,
+    Object description = freezed,
+    Object icon = freezed,
   }) {
     return _then(_value.copyWith(
       main: main == freezed
@@ -320,9 +320,9 @@ class __$WeatherInfoCopyWithImpl<$Res> extends _$WeatherInfoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? main = freezed,
-    Object? description = freezed,
-    Object? icon = freezed,
+    Object main = freezed,
+    Object description = freezed,
+    Object icon = freezed,
   }) {
     return _then(_WeatherInfo(
       main: main == freezed
@@ -345,7 +345,7 @@ class __$WeatherInfoCopyWithImpl<$Res> extends _$WeatherInfoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WeatherInfo implements _WeatherInfo {
   _$_WeatherInfo(
-      {required this.main, required this.description, required this.icon});
+      { this.main,  this.description,  this.icon});
 
   factory _$_WeatherInfo.fromJson(Map<String, dynamic> json) =>
       _$$_WeatherInfoFromJson(json);
@@ -393,9 +393,9 @@ class _$_WeatherInfo implements _WeatherInfo {
 
 abstract class _WeatherInfo implements WeatherInfo {
   factory _WeatherInfo(
-      {required String main,
-      required String description,
-      required String icon}) = _$_WeatherInfo;
+      { String main,
+       String description,
+       String icon}) = _$_WeatherInfo;
 
   factory _WeatherInfo.fromJson(Map<String, dynamic> json) =
       _$_WeatherInfo.fromJson;
@@ -421,9 +421,9 @@ class _$WeatherTearOff {
   const _$WeatherTearOff();
 
   _Weather call(
-      {@JsonKey(name: 'main') required WeatherParams weatherParams,
-      @JsonKey(name: 'weather') required List<WeatherInfo> weatherInfo,
-      required int dt}) {
+      {@JsonKey(name: 'main')  WeatherParams weatherParams,
+      @JsonKey(name: 'weather')  List<WeatherInfo> weatherInfo,
+       int dt}) {
     return _Weather(
       weatherParams: weatherParams,
       weatherInfo: weatherInfo,
@@ -431,7 +431,7 @@ class _$WeatherTearOff {
     );
   }
 
-  Weather fromJson(Map<String, Object?> json) {
+  Weather fromJson(Map<String, Object> json) {
     return Weather.fromJson(json);
   }
 }
@@ -474,9 +474,9 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? weatherParams = freezed,
-    Object? weatherInfo = freezed,
-    Object? dt = freezed,
+    Object weatherParams = freezed,
+    Object weatherInfo = freezed,
+    Object dt = freezed,
   }) {
     return _then(_value.copyWith(
       weatherParams: weatherParams == freezed
@@ -527,9 +527,9 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? weatherParams = freezed,
-    Object? weatherInfo = freezed,
-    Object? dt = freezed,
+    Object weatherParams = freezed,
+    Object weatherInfo = freezed,
+    Object dt = freezed,
   }) {
     return _then(_Weather(
       weatherParams: weatherParams == freezed
@@ -552,9 +552,9 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Weather implements _Weather {
   _$_Weather(
-      {@JsonKey(name: 'main') required this.weatherParams,
-      @JsonKey(name: 'weather') required this.weatherInfo,
-      required this.dt});
+      {@JsonKey(name: 'main')  this.weatherParams,
+      @JsonKey(name: 'weather')  this.weatherInfo,
+       this.dt});
 
   factory _$_Weather.fromJson(Map<String, dynamic> json) =>
       _$$_WeatherFromJson(json);
@@ -605,9 +605,9 @@ class _$_Weather implements _Weather {
 
 abstract class _Weather implements Weather {
   factory _Weather(
-      {@JsonKey(name: 'main') required WeatherParams weatherParams,
-      @JsonKey(name: 'weather') required List<WeatherInfo> weatherInfo,
-      required int dt}) = _$_Weather;
+      {@JsonKey(name: 'main')  WeatherParams weatherParams,
+      @JsonKey(name: 'weather')  List<WeatherInfo> weatherInfo,
+       int dt}) = _$_Weather;
 
   factory _Weather.fromJson(Map<String, dynamic> json) = _$_Weather.fromJson;
 

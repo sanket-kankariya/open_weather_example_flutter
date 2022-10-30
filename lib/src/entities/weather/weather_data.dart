@@ -4,12 +4,12 @@ import 'package:open_weather_example_flutter/src/entities/weather/weather.dart';
 /// Derived model class used in the UI
 class WeatherData {
   WeatherData({
-    required this.temp,
-    required this.minTemp,
-    required this.maxTemp,
-    required this.description,
-    required this.date,
-    required this.icon,
+    this.temp,
+    this.minTemp,
+    this.maxTemp,
+    this.description,
+    this.date,
+    this.icon,
   });
 
   factory WeatherData.from(Weather weather) {
